@@ -1,3 +1,18 @@
+// Ejercicio 1
+//
+// El propósito de la función callback es permitir que quien llame a la función suma
+// proporcione una función personalizada que se ejecutará una vez que se haya calculado la suma de a y b.
+// Esto se conoce como una "función de devolución de llamada" o "callback function".
+function suma(a, b, callback) {
+  let c = a + b;
+  callback();
+}
+
+suma(2, 3, () => {
+  console.log("La suma se realizó correctamente");
+});
+
+// Ejercicio 2: Calculadora
 let operacionSeleccionada = null;
 const formCalculadora = document.getElementById("formCalculadora");
 const operaciones = document.getElementById("operaciones");
@@ -5,7 +20,6 @@ const spanResultado = document.getElementById("resultado");
 
 // Se agrega un evento click a cada botón de operación
 let btns = operaciones.getElementsByClassName("operacion");
-
 for (const btn of btns) {
   btn.addEventListener("click", function () {
     seleccionarOperacion(btn);
@@ -33,17 +47,6 @@ function limpiarOperaciones() {
   }
 }
 
-// Ejercicio 1
-//
-// El propósito de la función callback es permitir que quien llame a la función suma
-// proporcione una función personalizada que se ejecutará una vez que se haya calculado la suma de a y b.
-// Esto se conoce como una "función de devolución de llamada" o "callback function".
-function suma(a, b, callback) {
-  let c = a + b;
-  callback();
-}
-
-// Ejercicio 2
 function sumar(a, b) {
   return a + b;
 }
@@ -66,7 +69,6 @@ function dividir(a, b) {
 
 function raiz(a) {
   if (a < 0) return "Error: Raíz cuadrada de un número negativo";
-
   return Math.sqrt(a);
 }
 
@@ -86,8 +88,7 @@ function validarOperacion() {
   return true;
 }
 
-// Ejercicio 3
-
+// Se agrega un evento submit al formulario de la calculadora
 formCalculadora.addEventListener("submit", function (event) {
   event.preventDefault();
 
