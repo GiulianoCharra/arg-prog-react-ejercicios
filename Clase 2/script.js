@@ -1,5 +1,5 @@
 let operacionSeleccionada = null;
-const form = document.getElementById("formCalculadora");
+const formCalculadora = document.getElementById("formCalculadora");
 const operaciones = document.getElementById("operaciones");
 const spanResultado = document.getElementById("resultado");
 
@@ -88,7 +88,7 @@ function validarOperacion() {
 
 // Ejercicio 3
 
-document.getElementById("formCalculadora").addEventListener("submit", function (event) {
+formCalculadora.addEventListener("submit", function (event) {
   event.preventDefault();
 
   if (!validarOperacion()) return;
@@ -125,5 +125,5 @@ document.getElementById("formCalculadora").addEventListener("submit", function (
   spanResultado.textContent = resultado;
   limpiarOperaciones();
   operacionSeleccionada = null;
-  form.reset();
+  formCalculadora.reset();
 });
