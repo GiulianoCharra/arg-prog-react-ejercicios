@@ -1,0 +1,21 @@
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: rgb(37, 71, 209);
+}
